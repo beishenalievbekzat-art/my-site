@@ -3,27 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Империя Пиццы — Доставка в Бишкеке (Демо)</title>
+    <title>Империя Пиццы — Premium Dark Edition</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container header-flex">
-            <div class="logo">Империя Пиццы <span>Демо</span></div>
+            <div class="logo">Империя Пиццы <span>Black</span></div>
             <nav>
                 <a href="#menu">Меню</a>
                 <a href="#combo">Комбо</a>
                 <a href="#contacts">Контакты</a>
             </nav>
             <div class="cart-icon">
-                🛒 Корзина: <span id="cart-count">0</span>
+                🛒 <span id="cart-count">0</span>
             </div>
         </div>
     </header>
 
+    <!-- Главный баннер (Hero Section) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Горячая пицца в Бишкеке</h1>
+            <p>Доставка вкуса в фирменном темном стиле. Быстро, сочно, незабываемо.</p>
+            <a href="#menu" class="btn-primary">Перейти в меню</a>
+        </div>
+    </section>
+
     <main class="container">
         <section id="menu">
-            <h2>Популярные пиццы</h2>
+            <h2 class="section-title">Популярные пиццы</h2>
             <div class="pizza-grid">
                 
                 <!-- Карточка 1 -->
@@ -33,9 +42,9 @@
                     </div>
                     <div class="pizza-info">
                         <h3>Пицца "Пепперони"</h3>
-                        <p>Пикантные колбаски пепперони, много моцареллы, фирменный томатный соус.</p>
+                        <p>Пикантные колбаски пепперони, много моцареллы, фирменный томатный соус с итальянскими травами.</p>
                         <div class="card-bottom">
-                            <span class="price">490 сомов</span>
+                            <span class="price">490 сом</span>
                             <button class="add-to-cart-btn">В корзину</button>
                         </div>
                     </div>
@@ -48,9 +57,9 @@
                     </div>
                     <div class="pizza-info">
                         <h3>Пицца "Маргарита"</h3>
-                        <p>Классический итальянский вкус: сочные томаты, много сыра моцарелла и свежий базилик.</p>
+                        <p>Классический итальянский выбор: сочные томаты, много расплавленной моцареллы и свежий базилик.</p>
                         <div class="card-bottom">
-                            <span class="price">420 сомов</span>
+                            <span class="price">420 сом</span>
                             <button class="add-to-cart-btn">В корзину</button>
                         </div>
                     </div>
@@ -63,9 +72,9 @@
                     </div>
                     <div class="pizza-info">
                         <h3>Фирменная "Империя"</h3>
-                        <p>Куриное филе, нежные грибы, ветчина, свежие томаты и моцарелла под соусом.</p>
+                        <p>Нежное куриное филе, лесные грибы, ветчина, свежие томаты и двойная порция моцареллы.</p>
                         <div class="card-bottom">
-                            <span class="price">540 сомов</span>
+                            <span class="price">540 сом</span>
                             <button class="add-to-cart-btn">В корзину</button>
                         </div>
                     </div>
@@ -75,7 +84,6 @@
         </section>
     </main>
 
-    <!-- Скрипт для интерактивной корзины (JavaScript) -->
     <script>
         let count = 0;
         const cartCountSpan = document.getElementById('cart-count');
@@ -86,11 +94,12 @@
                 count++;
                 cartCountSpan.innerText = count;
                 
-                // Небольшой визуальный эффект при клике
-                button.style.backgroundColor = '#2a9d8f';
+                button.style.backgroundColor = '#06d6a0';
+                button.style.color = '#121212';
                 button.innerText = 'Добавлено!';
                 setTimeout(() => {
-                    button.style.backgroundColor = '#e63946';
+                    button.style.backgroundColor = '#ff4d4d';
+                    button.style.color = '#ffffff';
                     button.innerText = 'В корзину';
                 }, 800);
             });
