@@ -3,23 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Империя Пиццы — тёмное издание</title>
+<title>Империя Пиццы — дровяная пицца с доставкой по Бишкеку</title>
+<meta name="description" content="Пицца на живой закваске из дровяной печи. Доставка по Бишкеку за 30 минут. Комбо-наборы, закуски, десерты. Заказ онлайн или по телефону.">
+<meta name="theme-color" content="#0b0a09">
+
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Империя Пиццы — дровяная пицца с доставкой">
+<meta property="og:description" content="Тесто на закваске, соус San Marzano и сыр, который тянется на всю комнату. Доставка по Бишкеку за 30 минут.">
+<meta property="og:locale" content="ru_RU">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='46' fill='%23e0aa54'/%3E%3Ccircle cx='50' cy='50' r='38' fill='%23a8321f'/%3E%3Ccircle cx='35' cy='38' r='6' fill='%23c1442b'/%3E%3Ccircle cx='62' cy='34' r='5' fill='%23c1442b'/%3E%3Ccircle cx='58' cy='58' r='6' fill='%23c1442b'/%3E%3Ccircle cx='34' cy='60' r='5' fill='%23c1442b'/%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Империя Пиццы",
+  "servesCuisine": "Pizza",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Чуй 123",
+    "addressLocality": "Бишкек",
+    "addressCountry": "KG"
+  },
+  "telephone": "+996700123456",
+  "openingHours": "Mo-Su 10:00-23:00"
+}
+</script>
 </head>
 <body>
 
+<a href="#top" class="skip-link">Перейти к содержимому</a>
 <div class="grain"></div>
 
 <header id="header">
   <div class="container header-flex">
     <a href="#top" class="logo">Империя <span>Пиццы</span></a>
 
-    <nav id="mainNav">
+    <nav id="mainNav" aria-label="Основная навигация">
       <a href="#menu" class="nav-link">Меню</a>
       <a href="#combo" class="nav-link">Комбо</a>
+      <a href="#how" class="nav-link">Как заказать</a>
       <a href="#about" class="nav-link">О нас</a>
       <a href="#contacts" class="nav-link">Контакты</a>
     </nav>
@@ -29,19 +59,20 @@
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.7 4.6A1 1 0 0 0 6.3 19H17M17 13v6M10 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM17.5 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <span class="cart-badge" id="cartCount">0</span>
       </button>
-      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню навигации" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
 </header>
 
-<div id="mobileNav" class="mobile-nav">
+<nav id="mobileNav" class="mobile-nav" aria-label="Мобильная навигация">
   <a href="#menu" class="nav-link">Меню</a>
   <a href="#combo" class="nav-link">Комбо</a>
+  <a href="#how" class="nav-link">Как заказать</a>
   <a href="#about" class="nav-link">О нас</a>
   <a href="#contacts" class="nav-link">Контакты</a>
-</div>
+</nav>
 
 <main id="top">
 
@@ -51,7 +82,17 @@
       <div class="hero-copy reveal">
         <p class="eyebrow">Бишкек · с пылу с жару за 30 минут</p>
         <h1>Пицца,<br> ради которой<br><em>стоит</em> выйти из дома.</h1>
-        <p class="hero-text">Тесто на живой закваске, соусы по домашним рецептам и сыр, который тянется на всю комнату. Заказывай онлайн — привезём горячей, никаких компромиссов.</p>
+        <p class="hero-text">Тесто на живой закваске, соус San Marzano и сыр, который тянется на всю комнату. Заказывай онлайн — привезём горячей, никаких компромиссов.</p>
+
+        <div class="hero-size" role="group" aria-label="Выбор размера пиццы">
+          <span class="hero-size-label">Начиная от</span>
+          <div class="size-toggle" id="sizeToggle">
+            <button class="size-opt active" data-size="30" data-mult="1">30 см</button>
+            <button class="size-opt" data-size="40" data-mult="1.35">40 см</button>
+          </div>
+          <span class="hero-size-price" id="heroPrice">420 с</span>
+        </div>
+
         <div class="hero-actions">
           <a href="#menu" class="btn btn-primary">Смотреть меню</a>
           <a href="#contacts" class="btn btn-ghost">Позвонить</a>
@@ -63,7 +104,7 @@
         </div>
       </div>
 
-      <div class="hero-visual reveal">
+      <div class="hero-visual reveal" id="heroVisual">
         <svg class="pizza-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="210" cy="210" r="170" fill="url(#crust)"/>
           <circle cx="210" cy="210" r="150" fill="url(#sauce)"/>
@@ -95,19 +136,25 @@
             </radialGradient>
           </defs>
         </svg>
+        <div class="steam s1" aria-hidden="true"></div>
+        <div class="steam s2" aria-hidden="true"></div>
+        <div class="steam s3" aria-hidden="true"></div>
         <div class="flare flare-1"></div>
         <div class="flare flare-2"></div>
       </div>
     </div>
   </section>
 
-  <section class="strip reveal">
+  <section class="strip reveal" aria-label="Преимущества">
     <div class="container strip-inner">
       <span>🔥 Дровяная печь</span>
       <span>🧀 Моцарелла Президент</span>
       <span>🚴 Бесплатная доставка от 800 сом</span>
       <span>🍕 Свежее тесто каждый день</span>
       <span>⏱ 30 минут или пицца в подарок</span>
+      <span>🔥 Дровяная печь</span>
+      <span>🧀 Моцарелла Президент</span>
+      <span>🚴 Бесплатная доставка от 800 сом</span>
     </div>
   </section>
 
@@ -118,14 +165,14 @@
         <h2>Выбирай начинку —<br>мы уже разжигаем печь</h2>
       </div>
 
-      <div class="tabs reveal" id="tabs">
-        <button class="tab active" data-cat="pizza">Пицца</button>
-        <button class="tab" data-cat="snacks">Закуски</button>
-        <button class="tab" data-cat="desserts">Десерты</button>
-        <button class="tab" data-cat="drinks">Напитки</button>
+      <div class="tabs reveal" id="tabs" role="tablist" aria-label="Категории меню">
+        <button class="tab active" data-cat="pizza" role="tab" aria-selected="true">Пицца</button>
+        <button class="tab" data-cat="snacks" role="tab" aria-selected="false">Закуски</button>
+        <button class="tab" data-cat="desserts" role="tab" aria-selected="false">Десерты</button>
+        <button class="tab" data-cat="drinks" role="tab" aria-selected="false">Напитки</button>
       </div>
 
-      <div class="menu-grid" id="menuGrid"></div>
+      <div class="menu-grid" id="menuGrid" role="tabpanel"></div>
     </div>
   </section>
 
@@ -139,7 +186,33 @@
     </div>
   </section>
 
-  <section id="about" class="section about">
+  <section id="how" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Как заказать</p>
+        <h2>Три шага до горячей пиццы</h2>
+      </div>
+      <div class="steps reveal">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Выбери блюда</h3>
+          <p>Собери заказ из меню или возьми готовое комбо — добавляй в корзину в один клик.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Оформи заказ</h3>
+          <p>Укажи имя, телефон и адрес — оператор перезвонит и подтвердит заказ за пару минут.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Получи горячим</h3>
+          <p>Курьер привезёт заказ за 30 минут. Опоздали — следующая пицца за наш счёт.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-alt about">
     <div class="container about-grid reveal">
       <div>
         <p class="eyebrow">О нас</p>
@@ -160,7 +233,72 @@
     </div>
   </section>
 
-  <section id="contacts" class="section section-alt">
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Отзывы</p>
+        <h2>Что говорят гости</h2>
+      </div>
+      <div class="reviews-grid reveal">
+        <article class="review-card">
+          <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p>«Заказываем каждую пятницу — тесто реально другое, не картон, как везде. Барбекю с курицей забираю только у них».</p>
+          <div class="review-author">Айгуль Т.</div>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Оценка 5 из 5">★★★★★</div>
+          <p>«Привезли за 25 минут горячей, коробка не помялась. Комбо для двоих — идеальный вариант на вечер сериалов».</p>
+          <div class="review-author">Данияр К.</div>
+        </article>
+        <article class="review-card">
+          <div class="stars" aria-label="Оценка 4 из 5">★★★★☆</div>
+          <p>«Четыре сыра — топ, но хотелось бы побольше веганских опций. В остальном сервис и вкус на уровне».</p>
+          <div class="review-author">Марина С.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Вопросы</p>
+        <h2>Частые вопросы</h2>
+      </div>
+      <div class="faq-list reveal" id="faqList">
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Сколько по времени готовится и доставляется заказ?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>В среднем 30 минут с момента подтверждения заказа. Если задержим — следующая пицца в подарок.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Какие способы оплаты доступны?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Наличными или картой курьеру, а также переводом на Mbank / Optima Bank при оформлении по телефону.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Есть ли доставка за город или в другие районы?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Доставляем по всему Бишкеку. Для адресов за пределами города уточняйте стоимость доставки у оператора.</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            Можно ли убрать или заменить ингредиент?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-a"><p>Да, укажите пожелание в комментарии к заказу или скажите оператору по телефону — учтём при готовке.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="section">
     <div class="container contacts-grid reveal">
       <div>
         <p class="eyebrow">Контакты</p>
@@ -182,11 +320,24 @@
           </div>
         </div>
 
-        <form class="order-form" id="orderForm">
-          <input type="text" placeholder="Ваше имя" required>
-          <input type="tel" placeholder="Номер телефона" required>
-          <textarea placeholder="Что хотите заказать?" rows="3"></textarea>
-          <button type="submit" class="btn btn-primary">Отправить заявку</button>
+        <form class="order-form" id="orderForm" novalidate>
+          <div class="form-row">
+            <label class="field">
+              <span>Имя</span>
+              <input type="text" name="name" placeholder="Как к вам обращаться" required minlength="2">
+            </label>
+            <label class="field">
+              <span>Телефон</span>
+              <input type="tel" name="phone" placeholder="0700 123 456" required pattern="^[0-9+\s()-]{6,}$">
+            </label>
+          </div>
+          <label class="field">
+            <span>Комментарий к заказу</span>
+            <textarea name="message" placeholder="Что хотите заказать? Адрес доставки?" rows="3"></textarea>
+          </label>
+          <button type="submit" class="btn btn-primary btn-block" id="submitBtn">
+            <span class="btn-label">Отправить заявку</span>
+          </button>
           <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -217,19 +368,23 @@
 </footer>
 
 <div class="cart-overlay" id="cartOverlay"></div>
-<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Корзина">
   <div class="cart-head">
     <h3>Ваша корзина</h3>
     <button class="cart-close" id="cartClose" aria-label="Закрыть корзину">✕</button>
   </div>
   <div class="cart-items" id="cartItems"></div>
   <div class="cart-footer">
-    <div class="cart-total-row"><span>Итого</span><strong id="cartTotal">0 сом</strong></div>
+    <div class="cart-total-row"><span>Итого</span><strong id="cartTotal">0 с</strong></div>
     <button class="btn btn-primary btn-block" id="checkoutBtn">Оформить заказ</button>
   </div>
 </aside>
 
-<div class="toast" id="toast"></div>
+<button class="mobile-cart-pill" id="mobileCartPill" aria-hidden="true">
+  <span id="pillCount">0</span> товара · <strong id="pillTotal">0 с</strong>
+</button>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script src="script.js"></script>
 </body>

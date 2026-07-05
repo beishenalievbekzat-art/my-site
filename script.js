@@ -5,32 +5,32 @@
 // ---------- данные меню ----------
 const MENU = {
   pizza: [
-    { id: "p1", name: "Маргарита", desc: "Томатный соус, моцарелла, свежий базилик, оливковое масло.", price: 420, weight: "450 г / 30 см" },
-    { id: "p2", name: "Пепперони", desc: "Острая пепперони, моцарелла, томатный соус, орегано.", price: 490, weight: "480 г / 30 см" },
-    { id: "p3", name: "Четыре сыра", desc: "Моцарелла, горгонзола, пармезан, сулугуни, сливочный соус.", price: 540, weight: "460 г / 30 см" },
-    { id: "p4", name: "Барбекю с курицей", desc: "Курица гриль, соус барбекю, лук, моцарелла, паприка.", price: 510, weight: "500 г / 30 см" },
-    { id: "p5", name: "Мясная делюкс", desc: "Говядина, пепперони, бекон, ветчина, моцарелла.", price: 570, weight: "520 г / 30 см" },
-    { id: "p6", name: "Гавайская", desc: "Ветчина, ананас, моцарелла, томатный соус.", price: 460, weight: "460 г / 30 см" },
-    { id: "p7", name: "Дьябло", desc: "Острая салями, халапеньо, чили-масло, моцарелла.", price: 500, weight: "460 г / 30 см" },
-    { id: "p8", name: "Грибная трюфель", desc: "Шампиньоны, трюфельное масло, пармезан, сливочный соус.", price: 560, weight: "460 г / 30 см" },
+    { id: "p1", name: "Маргарита", desc: "Томатный соус, моцарелла, свежий базилик, оливковое масло.", price: 420, weight: "450 г / 30 см", tags: ["veg"] },
+    { id: "p2", name: "Пепперони", desc: "Острая пепперони, моцарелла, томатный соус, орегано.", price: 490, weight: "480 г / 30 см", tags: ["spicy"] },
+    { id: "p3", name: "Четыре сыра", desc: "Моцарелла, горгонзола, пармезан, сулугуни, сливочный соус.", price: 540, weight: "460 г / 30 см", tags: ["veg"] },
+    { id: "p4", name: "Барбекю с курицей", desc: "Курица гриль, соус барбекю, лук, моцарелла, паприка.", price: 510, weight: "500 г / 30 см", tags: [] },
+    { id: "p5", name: "Мясная делюкс", desc: "Говядина, пепперони, бекон, ветчина, моцарелла.", price: 570, weight: "520 г / 30 см", tags: [] },
+    { id: "p6", name: "Гавайская", desc: "Ветчина, ананас, моцарелла, томатный соус.", price: 460, weight: "460 г / 30 см", tags: [] },
+    { id: "p7", name: "Дьябло", desc: "Острая салями, халапеньо, чили-масло, моцарелла.", price: 500, weight: "460 г / 30 см", tags: ["spicy"] },
+    { id: "p8", name: "Грибная трюфель", desc: "Шампиньоны, трюфельное масло, пармезан, сливочный соус.", price: 560, weight: "460 г / 30 см", tags: ["veg"] },
   ],
   snacks: [
-    { id: "s1", name: "Картофель фри", desc: "Хрустящий картофель фри с соусом на выбор.", price: 180, weight: "200 г" },
-    { id: "s2", name: "Наггетсы", desc: "Куриные наггетсы, 8 шт, соус в комплекте.", price: 240, weight: "180 г" },
-    { id: "s3", name: "Луковые кольца", desc: "Хрустящие кольца в темпуре, соус чили-майо.", price: 210, weight: "180 г" },
-    { id: "s4", name: "Сырные палочки", desc: "Моцарелла в панировке, соус клюквенный.", price: 260, weight: "200 г" },
-    { id: "s5", name: "Брускетты", desc: "Хрустящий багет, томаты, песто, пармезан.", price: 220, weight: "150 г" },
+    { id: "s1", name: "Картофель фри", desc: "Хрустящий картофель фри с соусом на выбор.", price: 180, weight: "200 г", tags: ["veg"] },
+    { id: "s2", name: "Наггетсы", desc: "Куриные наггетсы, 8 шт, соус в комплекте.", price: 240, weight: "180 г", tags: [] },
+    { id: "s3", name: "Луковые кольца", desc: "Хрустящие кольца в темпуре, соус чили-майо.", price: 210, weight: "180 г", tags: ["veg"] },
+    { id: "s4", name: "Сырные палочки", desc: "Моцарелла в панировке, соус клюквенный.", price: 260, weight: "200 г", tags: ["veg"] },
+    { id: "s5", name: "Брускетты", desc: "Хрустящий багет, томаты, песто, пармезан.", price: 220, weight: "150 г", tags: ["veg"] },
   ],
   desserts: [
-    { id: "d1", name: "Шоколадный фондан", desc: "Тёплый шоколадный кекс с жидкой начинкой.", price: 260, weight: "120 г" },
-    { id: "d2", name: "Чизкейк Нью-Йорк", desc: "Классический сливочный чизкейк на песочной основе.", price: 240, weight: "130 г" },
-    { id: "d3", name: "Тирамису", desc: "Маскарпоне, кофе, какао, савоярди.", price: 250, weight: "130 г" },
+    { id: "d1", name: "Шоколадный фондан", desc: "Тёплый шоколадный кекс с жидкой начинкой.", price: 260, weight: "120 г", tags: ["veg"] },
+    { id: "d2", name: "Чизкейк Нью-Йорк", desc: "Классический сливочный чизкейк на песочной основе.", price: 240, weight: "130 г", tags: ["veg"] },
+    { id: "d3", name: "Тирамису", desc: "Маскарпоне, кофе, какао, савоярди.", price: 250, weight: "130 г", tags: ["veg"] },
   ],
   drinks: [
-    { id: "dr1", name: "Coca-Cola 0.5 л", desc: "Классическая газировка.", price: 90, weight: "0.5 л" },
-    { id: "dr2", name: "Домашний лимонад", desc: "Лимон, мята, содовая.", price: 150, weight: "0.4 л" },
-    { id: "dr3", name: "Мохито безалкогольный", desc: "Лайм, мята, тростниковый сахар.", price: 170, weight: "0.4 л" },
-    { id: "dr4", name: "Чай / кофе", desc: "На выбор: чёрный чай, американо, капучино.", price: 100, weight: "0.3 л" },
+    { id: "dr1", name: "Coca-Cola 0.5 л", desc: "Классическая газировка.", price: 90, weight: "0.5 л", tags: [] },
+    { id: "dr2", name: "Домашний лимонад", desc: "Лимон, мята, содовая.", price: 150, weight: "0.4 л", tags: ["veg"] },
+    { id: "dr3", name: "Мохито безалкогольный", desc: "Лайм, мята, тростниковый сахар.", price: 170, weight: "0.4 л", tags: ["veg"] },
+    { id: "dr4", name: "Чай / кофе", desc: "На выбор: чёрный чай, американо, капучино.", price: 100, weight: "0.3 л", tags: [] },
   ],
 };
 
@@ -41,7 +41,16 @@ const COMBO = [
   { id: "c4", name: "Комбо для компании", desc: "3 пиццы 40 см + 2 закуски + 6 напитков.", price: 2390 },
 ];
 
-const CATEGORY_LABEL = { pizza: "Пицца", snacks: "Закуски", desserts: "Десерты", drinks: "Напитки" };
+const TAG_LABEL = { spicy: "острое", veg: "veg" };
+const ALL_ITEMS = [...Object.values(MENU).flat(), ...COMBO];
+
+function findItem(id) {
+  return ALL_ITEMS.find((i) => i.id === id);
+}
+
+function formatPrice(n) {
+  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
 
 // ---------- состояние корзины ----------
 let cart = {};
@@ -49,12 +58,6 @@ try {
   cart = JSON.parse(localStorage.getItem("pizza_cart") || "{}");
 } catch (e) {
   cart = {};
-}
-
-const ALL_ITEMS = [...Object.values(MENU).flat(), ...COMBO];
-
-function findItem(id) {
-  return ALL_ITEMS.find((i) => i.id === id);
 }
 
 function saveCart() {
@@ -79,6 +82,7 @@ function addToCart(id) {
   saveCart();
   renderCartBadge();
   renderCartDrawer();
+  renderMobilePill();
   showToast(`${findItem(id)?.name || "Товар"} добавлен в корзину`);
 }
 
@@ -89,6 +93,7 @@ function changeQty(id, delta) {
   saveCart();
   renderCartBadge();
   renderCartDrawer();
+  renderMobilePill();
 }
 
 function removeFromCart(id) {
@@ -96,55 +101,79 @@ function removeFromCart(id) {
   saveCart();
   renderCartBadge();
   renderCartDrawer();
+  renderMobilePill();
 }
 
 // ---------- рендер бейджа ----------
 function renderCartBadge() {
   const el = document.getElementById("cartCount");
+  const btn = document.getElementById("cartBtn");
   if (el) el.textContent = cartCountTotal();
+  if (btn) {
+    btn.classList.add("bump");
+    setTimeout(() => btn.classList.remove("bump"), 300);
+  }
+}
+
+// ---------- рендер мобильного пилюли ----------
+function renderMobilePill() {
+  const pill = document.getElementById("mobileCartPill");
+  const countEl = document.getElementById("pillCount");
+  const totalEl = document.getElementById("pillTotal");
+  if (!pill) return;
+  const count = cartCountTotal();
+  countEl.textContent = count;
+  totalEl.textContent = `${formatPrice(cartPriceTotal())} с`;
+  pill.classList.toggle("show", count > 0);
 }
 
 // ---------- рендер меню ----------
 function renderMenu(category) {
   const grid = document.getElementById("menuGrid");
   if (!grid) return;
-  grid.innerHTML = "";
-  MENU[category].forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "menu-card";
-    card.innerHTML = `
-      <div class="menu-card-top">
-        <h3>${item.name}</h3>
-        <span class="price">${item.price} с</span>
-      </div>
-      <p>${item.desc}</p>
-      <div class="menu-card-bottom">
-        <span class="weight">${item.weight}</span>
-        <button class="add-btn" data-id="${item.id}" aria-label="Добавить ${item.name} в корзину">+</button>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
+  const items = MENU[category] || [];
+  if (items.length === 0) {
+    grid.innerHTML = `<p class="menu-empty">Пока пусто в этой категории.</p>`;
+    return;
+  }
+  grid.innerHTML = items
+    .map(
+      (item, i) => `
+      <article class="menu-card" style="animation-delay:${i * 0.04}s">
+        <div class="menu-card-top">
+          <div class="menu-card-title">
+            <h3>${item.name}</h3>
+            ${(item.tags || []).map((t) => `<span class="tag tag-${t}">${TAG_LABEL[t]}</span>`).join("")}
+          </div>
+          <span class="price">${formatPrice(item.price)} с</span>
+        </div>
+        <p>${item.desc}</p>
+        <div class="menu-card-bottom">
+          <span class="weight">${item.weight}</span>
+          <button class="add-btn" data-id="${item.id}" aria-label="Добавить ${item.name} в корзину">+</button>
+        </div>
+      </article>
+    `
+    )
+    .join("");
 }
 
 // ---------- рендер комбо ----------
 function renderCombo() {
   const grid = document.getElementById("comboGrid");
   if (!grid) return;
-  grid.innerHTML = "";
-  COMBO.forEach((item) => {
-    const card = document.createElement("article");
-    card.className = "combo-card";
-    card.innerHTML = `
-      <h3>${item.name}</h3>
-      <p>${item.desc}</p>
-      <div class="combo-card-bottom">
-        <span class="price">${item.price} с</span>
-        <button class="btn btn-primary btn-sm add-btn-combo" data-id="${item.id}">Добавить</button>
-      </div>
-    `;
-    grid.appendChild(card);
-  });
+  grid.innerHTML = COMBO.map(
+    (item) => `
+      <article class="combo-card">
+        <h3>${item.name}</h3>
+        <p>${item.desc}</p>
+        <div class="combo-card-bottom">
+          <span class="price">${formatPrice(item.price)} с</span>
+          <button class="btn btn-primary btn-sm add-btn-combo" data-id="${item.id}">Добавить</button>
+        </div>
+      </article>
+    `
+  ).join("");
 }
 
 // ---------- рендер корзины (drawer) ----------
@@ -155,7 +184,7 @@ function renderCartDrawer() {
 
   const ids = Object.keys(cart);
   if (ids.length === 0) {
-    wrap.innerHTML = `<p class="cart-empty">Корзина пока пуста.<br>Выбери что-нибудь вкусное 🍕</p>`;
+    wrap.innerHTML = `<div class="cart-empty"><span class="cart-empty-icon">🍕</span>Корзина пока пуста.<br>Выбери что-нибудь вкусное.</div>`;
   } else {
     wrap.innerHTML = ids
       .map((id) => {
@@ -165,7 +194,7 @@ function renderCartDrawer() {
           <div class="cart-item" data-id="${id}">
             <div>
               <div class="cart-item-name">${item.name}</div>
-              <div class="cart-item-price">${item.price} с × ${cart[id]}</div>
+              <div class="cart-item-price">${formatPrice(item.price)} с × ${cart[id]}</div>
             </div>
             <div class="cart-item-qty">
               <button class="qty-btn" data-action="dec" data-id="${id}" aria-label="Уменьшить количество">−</button>
@@ -178,7 +207,7 @@ function renderCartDrawer() {
       })
       .join("");
   }
-  totalEl.textContent = `${cartPriceTotal()} сом`;
+  totalEl.textContent = `${formatPrice(cartPriceTotal())} с`;
 }
 
 // ---------- toast ----------
@@ -212,6 +241,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderCombo();
   renderCartBadge();
   renderCartDrawer();
+  renderMobilePill();
   document.getElementById("year").textContent = new Date().getFullYear();
 
   // header scroll state
@@ -243,8 +273,12 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("tabs").addEventListener("click", (e) => {
     const tab = e.target.closest(".tab");
     if (!tab) return;
-    document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
+    document.querySelectorAll(".tab").forEach((t) => {
+      t.classList.remove("active");
+      t.setAttribute("aria-selected", "false");
+    });
     tab.classList.add("active");
+    tab.setAttribute("aria-selected", "true");
     renderMenu(tab.dataset.cat);
   });
 
@@ -268,6 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("cartBtn").addEventListener("click", openCart);
   document.getElementById("cartClose").addEventListener("click", closeCart);
   document.getElementById("cartOverlay").addEventListener("click", closeCart);
+  document.getElementById("mobileCartPill").addEventListener("click", openCart);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeCart();
   });
@@ -292,17 +327,86 @@ document.addEventListener("DOMContentLoaded", () => {
     saveCart();
     renderCartBadge();
     renderCartDrawer();
+    renderMobilePill();
     setTimeout(closeCart, 900);
   });
 
-  // order form
-  document.getElementById("orderForm").addEventListener("submit", (e) => {
+  // hero size toggle
+  const sizeToggle = document.getElementById("sizeToggle");
+  const heroPrice = document.getElementById("heroPrice");
+  const basePrice = 420;
+  sizeToggle.addEventListener("click", (e) => {
+    const btn = e.target.closest(".size-opt");
+    if (!btn) return;
+    sizeToggle.querySelectorAll(".size-opt").forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+    const mult = parseFloat(btn.dataset.mult);
+    heroPrice.textContent = `${Math.round(basePrice * mult)} с`;
+  });
+
+  // FAQ accordion
+  document.getElementById("faqList").addEventListener("click", (e) => {
+    const q = e.target.closest(".faq-q");
+    if (!q) return;
+    const item = q.closest(".faq-item");
+    const answer = item.querySelector(".faq-a");
+    const isOpen = q.getAttribute("aria-expanded") === "true";
+
+    // close others
+    document.querySelectorAll(".faq-q").forEach((otherQ) => {
+      if (otherQ !== q) {
+        otherQ.setAttribute("aria-expanded", "false");
+        otherQ.closest(".faq-item").querySelector(".faq-a").style.maxHeight = null;
+      }
+    });
+
+    q.setAttribute("aria-expanded", String(!isOpen));
+    answer.style.maxHeight = isOpen ? null : answer.scrollHeight + "px";
+  });
+
+  // order form with loading + validation state
+  const orderForm = document.getElementById("orderForm");
+  const submitBtn = document.getElementById("submitBtn");
+  const submitLabel = submitBtn.querySelector(".btn-label");
+  orderForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const note = document.getElementById("formNote");
-    note.textContent = "Спасибо! Заявка отправлена, мы перезвоним в течение 5 минут.";
-    e.target.reset();
-    setTimeout(() => (note.textContent = ""), 5000);
+
+    if (!orderForm.checkValidity()) {
+      note.textContent = "Проверьте, пожалуйста, имя и номер телефона.";
+      orderForm.querySelectorAll("input").forEach((input) => {
+        if (!input.checkValidity()) input.reportValidity();
+      });
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitLabel.innerHTML = `<span class="spinner"></span> Отправляем…`;
+
+    setTimeout(() => {
+      submitBtn.disabled = false;
+      submitLabel.textContent = "Отправить заявку";
+      note.textContent = "Спасибо! Заявка отправлена, мы перезвоним в течение 5 минут.";
+      orderForm.reset();
+      setTimeout(() => (note.textContent = ""), 6000);
+    }, 900);
   });
+
+  // subtle parallax tilt on hero pizza (desktop, non-touch, motion allowed)
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const heroVisual = document.getElementById("heroVisual");
+  const pizzaSvg = document.querySelector(".pizza-svg");
+  if (heroVisual && pizzaSvg && !prefersReducedMotion && window.matchMedia("(hover: hover)").matches) {
+    heroVisual.addEventListener("mousemove", (e) => {
+      const rect = heroVisual.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      pizzaSvg.style.transform = `rotateX(${y * -10}deg) rotateY(${x * 10}deg)`;
+    });
+    heroVisual.addEventListener("mouseleave", () => {
+      pizzaSvg.style.transform = "";
+    });
+  }
 
   // scroll reveal
   const revealEls = document.querySelectorAll(".reveal");
