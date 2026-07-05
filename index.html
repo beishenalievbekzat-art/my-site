@@ -3,22 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Разработка сайтов в Бишкеке | Моя Студия</title>
-    <meta name="description" content="Создание быстрых и современных сайтов для бизнеса. Индивидуальный подход и базовая SEO-оптимизация.">
-    <style>
-        body { font-family: sans-serif; background: #f4f4f9; color: #333; text-align: center; padding: 50px; }
-        .card { background: white; padding: 30px; border-radius: 10px; max-width: 500px; margin: 0 auto; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #007bff; }
-        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-    </style>
+    <title>Империя Пиццы — Доставка в Бишкеке (Демо)</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="logo">Империя Пиццы <span>Демо</span></div>
+            <nav>
+                <a href="#menu">Меню</a>
+                <a href="#combo">Комбо</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="card">
-        <h1>Сайты для вашего бизнеса</h1>
-        <p>Делаю качественные сайты-визитки, лендинги и интернет-магазины, которые приводят клиентов из поиска.</p>
-        <button onclick="alert('Спасибо за клик!')">Связаться со мной</button>
-    </div>
+    <main class="container">
+        <section id="menu">
+            <h2>Популярные пиццы</h2>
+            <div class="pizza-grid">
+                <!-- Карточка 1 -->
+                <div class="pizza-card">
+                    <h3>Пицца "Пепперони"</h3>
+                    <p>Пикантные колбаски пепперони, много моцареллы, фирменный томатный соус.</p>
+                    <div class="card-bottom">
+                        <span class="price">490 сомов</span>
+                        <button>В корзину</button>
+                    </div>
+                </div>
 
+                <!-- Карточка 2 -->
+                <div class="pizza-card">
+                    <h3>Пицца "Фирменная Империя"</h3>
+                    <p>Куриное филе, грибы, ветчина, свежие томаты, соус, сыр моцарелла.</p>
+                    <div class="card-bottom">
+                        <span class="price">540 сомов</span>
+                        <button>В корзину</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
