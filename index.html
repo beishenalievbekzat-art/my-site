@@ -1,109 +1,236 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Империя Пиццы — Premium Dark Edition</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Империя Пиццы — тёмное издание</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,900;1,9..144,600&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container header-flex">
-            <div class="logo">Империя Пиццы <span>Black</span></div>
-            <nav>
-                <a href="#menu">Меню</a>
-                <a href="#combo">Комбо</a>
-                <a href="#contacts">Контакты</a>
-            </nav>
-            <div class="cart-icon">
-                🛒 <span id="cart-count">0</span>
-            </div>
+
+<div class="grain"></div>
+
+<header id="header">
+  <div class="container header-flex">
+    <a href="#top" class="logo">Империя <span>Пиццы</span></a>
+
+    <nav id="mainNav">
+      <a href="#menu" class="nav-link">Меню</a>
+      <a href="#combo" class="nav-link">Комбо</a>
+      <a href="#about" class="nav-link">О нас</a>
+      <a href="#contacts" class="nav-link">Контакты</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="cart-btn" id="cartBtn" aria-label="Открыть корзину">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l.4 2M7 13h10l3-8H5.4M7 13L5.4 5M7 13l-1.7 4.6A1 1 0 0 0 6.3 19H17M17 13v6M10 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2ZM17.5 21a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span class="cart-badge" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burgerBtn" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobileNav" class="mobile-nav">
+  <a href="#menu" class="nav-link">Меню</a>
+  <a href="#combo" class="nav-link">Комбо</a>
+  <a href="#about" class="nav-link">О нас</a>
+  <a href="#contacts" class="nav-link">Контакты</a>
+</div>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Бишкек · с пылу с жару за 30 минут</p>
+        <h1>Пицца,<br> ради которой<br><em>стоит</em> выйти из дома.</h1>
+        <p class="hero-text">Тесто на живой закваске, соусы по домашним рецептам и сыр, который тянется на всю комнату. Заказывай онлайн — привезём горячей, никаких компромиссов.</p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Смотреть меню</a>
+          <a href="#contacts" class="btn btn-ghost">Позвонить</a>
         </div>
-    </header>
-
-    <!-- Главный баннер (Hero Section) -->
-    <section class="hero">
-        <div class="container hero-content">
-            <h1>Горячая пицца в Бишкеке</h1>
-            <p>Доставка вкуса в фирменном темном стиле. Быстро, сочно, незабываемо.</p>
-            <a href="#menu" class="btn-primary">Перейти в меню</a>
+        <div class="hero-stats">
+          <div><strong>320°C</strong><span>температура печи</span></div>
+          <div><strong>30 мин</strong><span>среднее время доставки</span></div>
+          <div><strong>4.9</strong><span>средняя оценка</span></div>
         </div>
-    </section>
+      </div>
 
-    <main class="container">
-        <section id="menu">
-            <h2 class="section-title">Популярные пиццы</h2>
-            <div class="pizza-grid">
-                
-                <!-- Карточка 1 -->
-                <div class="pizza-card">
-                    <div class="pizza-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&auto=format&fit=crop&q=60" alt="Пепперони">
-                    </div>
-                    <div class="pizza-info">
-                        <h3>Пицца "Пепперони"</h3>
-                        <p>Пикантные колбаски пепперони, много моцареллы, фирменный томатный соус с итальянскими травами.</p>
-                        <div class="card-bottom">
-                            <span class="price">490 сом</span>
-                            <button class="add-to-cart-btn">В корзину</button>
-                        </div>
-                    </div>
-                </div>
+      <div class="hero-visual reveal">
+        <svg class="pizza-svg" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="210" cy="210" r="170" fill="url(#crust)"/>
+          <circle cx="210" cy="210" r="150" fill="url(#sauce)"/>
+          <circle cx="210" cy="210" r="150" fill="url(#cheese)" opacity="0.9"/>
+          <g class="toppings">
+            <circle cx="150" cy="150" r="16" fill="#c1442b"/>
+            <circle cx="260" cy="130" r="14" fill="#c1442b"/>
+            <circle cx="290" cy="240" r="15" fill="#c1442b"/>
+            <circle cx="180" cy="280" r="13" fill="#c1442b"/>
+            <circle cx="230" cy="210" r="12" fill="#c1442b"/>
+            <circle cx="130" cy="230" r="11" fill="#c1442b"/>
+            <ellipse cx="205" cy="165" rx="9" ry="14" fill="#3f7d43" transform="rotate(20 205 165)"/>
+            <ellipse cx="260" cy="200" rx="9" ry="14" fill="#3f7d43" transform="rotate(-30 260 200)"/>
+            <ellipse cx="165" cy="235" rx="9" ry="14" fill="#3f7d43" transform="rotate(60 165 235)"/>
+            <ellipse cx="235" cy="270" rx="9" ry="14" fill="#3f7d43" transform="rotate(-10 235 270)"/>
+          </g>
+          <defs>
+            <radialGradient id="crust" cx="50%" cy="50%" r="50%">
+              <stop offset="82%" stop-color="#e7b56b"/>
+              <stop offset="100%" stop-color="#c98a3f"/>
+            </radialGradient>
+            <radialGradient id="sauce" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#a8321f"/>
+              <stop offset="100%" stop-color="#8e2a1a"/>
+            </radialGradient>
+            <radialGradient id="cheese" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#f4d27a"/>
+              <stop offset="100%" stop-color="#e6b95c"/>
+            </radialGradient>
+          </defs>
+        </svg>
+        <div class="flare flare-1"></div>
+        <div class="flare flare-2"></div>
+      </div>
+    </div>
+  </section>
 
-                <!-- Карточка 2 -->
-                <div class="pizza-card">
-                    <div class="pizza-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60" alt="Маргарита">
-                    </div>
-                    <div class="pizza-info">
-                        <h3>Пицца "Маргарита"</h3>
-                        <p>Классический итальянский выбор: сочные томаты, много расплавленной моцареллы и свежий базилик.</p>
-                        <div class="card-bottom">
-                            <span class="price">420 сом</span>
-                            <button class="add-to-cart-btn">В корзину</button>
-                        </div>
-                    </div>
-                </div>
+  <section class="strip reveal">
+    <div class="container strip-inner">
+      <span>🔥 Дровяная печь</span>
+      <span>🧀 Моцарелла Президент</span>
+      <span>🚴 Бесплатная доставка от 800 сом</span>
+      <span>🍕 Свежее тесто каждый день</span>
+      <span>⏱ 30 минут или пицца в подарок</span>
+    </div>
+  </section>
 
-                <!-- Карточка 3 -->
-                <div class="pizza-card">
-                    <div class="pizza-img-wrapper">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60" alt="Фирменная">
-                    </div>
-                    <div class="pizza-info">
-                        <h3>Фирменная "Империя"</h3>
-                        <p>Нежное куриное филе, лесные грибы, ветчина, свежие томаты и двойная порция моцареллы.</p>
-                        <div class="card-bottom">
-                            <span class="price">540 сом</span>
-                            <button class="add-to-cart-btn">В корзину</button>
-                        </div>
-                    </div>
-                </div>
+  <section id="menu" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Меню</p>
+        <h2>Выбирай начинку —<br>мы уже разжигаем печь</h2>
+      </div>
 
-            </div>
-        </section>
-    </main>
+      <div class="tabs reveal" id="tabs">
+        <button class="tab active" data-cat="pizza">Пицца</button>
+        <button class="tab" data-cat="snacks">Закуски</button>
+        <button class="tab" data-cat="desserts">Десерты</button>
+        <button class="tab" data-cat="drinks">Напитки</button>
+      </div>
 
-    <script>
-        let count = 0;
-        const cartCountSpan = document.getElementById('cart-count');
-        const buttons = document.querySelectorAll('.add-to-cart-btn');
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
 
-        buttons.forEach(button => {
-            button.addEventListener('click', () => {
-                count++;
-                cartCountSpan.innerText = count;
-                
-                button.style.backgroundColor = '#06d6a0';
-                button.style.color = '#121212';
-                button.innerText = 'Добавлено!';
-                setTimeout(() => {
-                    button.style.backgroundColor = '#ff4d4d';
-                    button.style.color = '#ffffff';
-                    button.innerText = 'В корзину';
-                }, 800);
-            });
-        });
-    </script>
+  <section id="combo" class="section section-alt">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Комбо</p>
+        <h2>Выгоднее, чем поштучно</h2>
+      </div>
+      <div class="combo-grid" id="comboGrid"></div>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <div class="container about-grid reveal">
+      <div>
+        <p class="eyebrow">О нас</p>
+        <h2>Не сеть. Пиццерия соседского масштаба.</h2>
+        <p class="about-text">«Империя Пиццы» появилась потому, что нам надоела резиновая моцарелла и тесто из холодильника. Мы печём каждую пиццу на заказ, в дровяной печи, и отправляем курьера только когда она готова — не раньше.</p>
+        <ul class="about-list">
+          <li>Тесто настаивается 24 часа на закваске</li>
+          <li>Соус — томаты San Marzano, без консервантов</li>
+          <li>Своя курьерская служба, без посредников</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <div class="about-card-row"><span>Заказов в день</span><strong>250+</strong></div>
+        <div class="about-card-row"><span>Видов пиццы</span><strong>18</strong></div>
+        <div class="about-card-row"><span>Точек по Бишкеку</span><strong>3</strong></div>
+        <div class="about-card-row"><span>Лет на рынке</span><strong>6</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacts" class="section section-alt">
+    <div class="container contacts-grid reveal">
+      <div>
+        <p class="eyebrow">Контакты</p>
+        <h2>Закажи прямо сейчас</h2>
+        <p class="about-text">Позвони или напиши — соберём заказ за пару минут. Работаем каждый день, без выходных.</p>
+
+        <div class="contact-rows">
+          <a class="contact-row" href="tel:+996700123456">
+            <span class="contact-icon">📞</span>
+            <span><strong>+996 700 123 456</strong><small>Приём заказов, 10:00–23:00</small></span>
+          </a>
+          <a class="contact-row" href="https://wa.me/996700123456" target="_blank" rel="noopener">
+            <span class="contact-icon">💬</span>
+            <span><strong>WhatsApp</strong><small>Быстрый заказ в переписке</small></span>
+          </a>
+          <div class="contact-row">
+            <span class="contact-icon">📍</span>
+            <span><strong>г. Бишкек, ул. Чуй 123</strong><small>Ежедневно, 10:00–23:00</small></span>
+          </div>
+        </div>
+
+        <form class="order-form" id="orderForm">
+          <input type="text" placeholder="Ваше имя" required>
+          <input type="tel" placeholder="Номер телефона" required>
+          <textarea placeholder="Что хотите заказать?" rows="3"></textarea>
+          <button type="submit" class="btn btn-primary">Отправить заявку</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="map-card">
+        <iframe
+          title="Карта — Бишкек"
+          src="https://maps.google.com/maps?q=Bishkek&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-flex">
+    <a href="#top" class="logo">Империя <span>Пиццы</span></a>
+    <p>© <span id="year"></span> Империя Пиццы. Все права защищены.</p>
+    <div class="socials">
+      <a href="#" aria-label="Instagram">IG</a>
+      <a href="#" aria-label="WhatsApp">WA</a>
+      <a href="#" aria-label="TikTok">TT</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-head">
+    <h3>Ваша корзина</h3>
+    <button class="cart-close" id="cartClose" aria-label="Закрыть корзину">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="cart-total-row"><span>Итого</span><strong id="cartTotal">0 сом</strong></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn">Оформить заказ</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
