@@ -8,13 +8,16 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container header-flex">
             <div class="logo">Империя Пиццы <span>Демо</span></div>
             <nav>
                 <a href="#menu">Меню</a>
                 <a href="#combo">Комбо</a>
                 <a href="#contacts">Контакты</a>
             </nav>
+            <div class="cart-icon">
+                🛒 Корзина: <span id="cart-count">0</span>
+            </div>
         </div>
     </header>
 
@@ -22,27 +25,76 @@
         <section id="menu">
             <h2>Популярные пиццы</h2>
             <div class="pizza-grid">
+                
                 <!-- Карточка 1 -->
                 <div class="pizza-card">
-                    <h3>Пицца "Пепперони"</h3>
-                    <p>Пикантные колбаски пепперони, много моцареллы, фирменный томатный соус.</p>
-                    <div class="card-bottom">
-                        <span class="price">490 сомов</span>
-                        <button>В корзину</button>
+                    <div class="pizza-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=500&auto=format&fit=crop&q=60" alt="Пепперони">
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Пицца "Пепперони"</h3>
+                        <p>Пикантные колбаски пепперони, много моцареллы, фирменный томатный соус.</p>
+                        <div class="card-bottom">
+                            <span class="price">490 сомов</span>
+                            <button class="add-to-cart-btn">В корзину</button>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Карточка 2 -->
                 <div class="pizza-card">
-                    <h3>Пицца "Фирменная Империя"</h3>
-                    <p>Куриное филе, грибы, ветчина, свежие томаты, соус, сыр моцарелла.</p>
-                    <div class="card-bottom">
-                        <span class="price">540 сомов</span>
-                        <button>В корзину</button>
+                    <div class="pizza-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=500&auto=format&fit=crop&q=60" alt="Маргарита">
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Пицца "Маргарита"</h3>
+                        <p>Классический итальянский вкус: сочные томаты, много сыра моцарелла и свежий базилик.</p>
+                        <div class="card-bottom">
+                            <span class="price">420 сомов</span>
+                            <button class="add-to-cart-btn">В корзину</button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Карточка 3 -->
+                <div class="pizza-card">
+                    <div class="pizza-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&auto=format&fit=crop&q=60" alt="Фирменная">
+                    </div>
+                    <div class="pizza-info">
+                        <h3>Фирменная "Империя"</h3>
+                        <p>Куриное филе, нежные грибы, ветчина, свежие томаты и моцарелла под соусом.</p>
+                        <div class="card-bottom">
+                            <span class="price">540 сомов</span>
+                            <button class="add-to-cart-btn">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
+
+    <!-- Скрипт для интерактивной корзины (JavaScript) -->
+    <script>
+        let count = 0;
+        const cartCountSpan = document.getElementById('cart-count');
+        const buttons = document.querySelectorAll('.add-to-cart-btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                count++;
+                cartCountSpan.innerText = count;
+                
+                // Небольшой визуальный эффект при клике
+                button.style.backgroundColor = '#2a9d8f';
+                button.innerText = 'Добавлено!';
+                setTimeout(() => {
+                    button.style.backgroundColor = '#e63946';
+                    button.innerText = 'В корзину';
+                }, 800);
+            });
+        });
+    </script>
 </body>
 </html>
